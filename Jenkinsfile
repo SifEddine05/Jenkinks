@@ -44,6 +44,14 @@ pipeline {
 
                   }
       }
+      stage("notification") {
+                  steps {
+                       notifyEvents message: 'Pipeline <b> is sucessufuly termined</b>', token: 'texibiiaiylbshdbuzat-qcmklslouyt'
+
+                  }
+      }
+
+  }
 }
 
 }
