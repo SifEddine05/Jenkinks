@@ -46,7 +46,7 @@ pipeline {
       }
       stage("notification") {
                   steps {
-                       notifyEvents message: 'Pipeline <b> is sucessufuly termined</b>', token: 'texibiiaiylbshdbuzat-qcmklslouyt'
+                       notifyEvents message: 'Pipeline  is sucessufuly termined', token: 'texibiiaiylbshdbuzat-qcmklslouyt'
                        mail bcc: '', body: 'Pipeline <b> is sucessufuly termined</b>', cc: 'ka_boukef@esi.dz', from: '', replyTo: '', subject: 'process Success', to: 'ks_sellami@esi.dz'
                   }
       }
