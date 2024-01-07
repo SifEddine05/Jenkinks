@@ -51,6 +51,13 @@ pipeline {
                   }
       }
 
+
+}
+post {
+    failure{
+                            notifyEvents message: 'Pipeline  is  failed', token: 'texibiiaiylbshdbuzat-qcmklslouyt'
+                           mail bcc: '', body: 'Pipeline <b> is field </b>', cc: 'ka_boukef@esi.dz', from: '', replyTo: '', subject: 'process Failed', to: 'ks_sellami@esi.dz'
+    }
 }
 
 }
