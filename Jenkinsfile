@@ -17,7 +17,7 @@ pipeline {
                       junit 'build/test-results/test/TEST-Matrix.xml'
                   }
       }
-      stage ('Code Analysis') { // la phase build
+      stage ('Code Analysis') { // la phase build hh
                   steps {
                                       withSonarQubeEnv('sonar'){
                       bat './gradlew.bat sonarqube'
