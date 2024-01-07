@@ -38,6 +38,12 @@ pipeline {
                   archiveArtifacts 'build/docs/'
               }
       }
+      stage("deploy") {
+                  steps {
+                      bat './gradlew.bat publish'
+
+                  }
+      }
 }
 
 }
