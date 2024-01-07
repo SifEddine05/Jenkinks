@@ -29,6 +29,15 @@ pipeline {
                       waitForQualityGate abortPipeline: true
                   }
       }
+
+      stage("Build") {
+              steps {
+                  bat './gradlew.bat build'
+                  bat './gradlew.bat javadoc'
+                  archiveArtifacts 'build/libs/*.jar'
+                  archiveArtifacts 'build/docs/'
+              }
+      }
 }
 
 }
